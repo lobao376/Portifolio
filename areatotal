@@ -1,0 +1,7 @@
+print('Vamos descobrir a área, e a quantia necessária de material.')
+largura = float(input('Largura:'))
+altura = float(input('Altura:'))
+area = largura * altura
+print ('Sua parede mede {}mx{}m,\ntotalizando uma área de {:.2f}m².'.format(largura,altura,area))
+tinta = area/2
+print('Para pintar essa parede você precisa de\n{:.2f}L de tinta.'.format(tinta))
