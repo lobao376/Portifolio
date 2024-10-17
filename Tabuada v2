@@ -1,0 +1,17 @@
+from time import sleep
+x = int(input ('\33[1;34mDigite um valor, para ver sua tabuada:\33[m '))
+print ('-'*40)
+for c in range(1, 11):
+    sleep(1.5)
+    print ('{} X {:2} = {}'.format(x,c, x*c))
+    sleep(1)
+p = int(input('Conceguiu me acompanhar? [ 1 ] SIM ou [ 2 ] NÃO: '))
+if p == 1:
+    print('\33[4;33mINCRIVEL\33[m')
+elif p == 2:
+    print('Tudo bem, vamos de novo...')
+    for c in range(1, 11):
+        sleep(2)
+        print ('{} X {:2} = {}'.format(x,c, x*c))
+        sleep(1)
+    print('Agora você vai conceguir!!!')
