@@ -1,0 +1,10 @@
+vc = (float(input('\33[1m Digite o valor da casa: ')))
+salario = float(input('\33[1m Digite seu salário: '))
+tempo = int(input('\33[1m Tempo de pagamento: '))
+p = vc / (tempo * 12) 
+limite = salario * 0.30 
+print('Para pagar o empréstimo de R${:.2f} em {} anos, sua parcela será de {:.2f}'.format(vc, tempo, p))
+if p <= limite:
+    print ('\33[1;0;42m Você está apto ao empréstimo!\33[0m')
+else:
+    print ('\33[1;0;41m Infelizmente não podemos ajudá-lo!\33[0m')
