@@ -1,0 +1,28 @@
+print('{:=^40}'.format('LOJAS AZAMBUJA'))
+compras = float(input('Preço das compras R$: '))
+print('FORMA DE PAGAMENTO')
+print('[ 1 ] à vista, dinheiro ou pix')
+print('[ 2 ] à vista no débito')
+print('[ 3 ] 2x no cartão')
+print('[ 4 ] 3x ou +, no cartão')
+op = int(input('Qual opção desejada?'))
+if op == 1:
+    total = compras - (compras * 10/100)
+    print('Sua compra de {:.2f}, fica R${:.2f} '.format(compras, total))
+elif op == 2:
+    total = compras - (compras * 5 / 100)
+    print('Sua compra de {:.2f}, fica R${:.2f} '.format(compras, total))
+elif op == 3:
+    total = compras
+    parcela = compras / 2
+    print('Sua compra de {:.2f} fica em 2x de R${:.2f} '.format(compras, parcela))
+elif op == 4:
+    # total = compras + (compras * 20 / 100) -> juros em cima da compra
+    totparc = int(input('Quantas vezes?'))
+    juros = 5  # Defina a taxa de juros por parcela (exemplo: 5% por parcela)
+    total = compras + (compras * (juros / 100) * totparc)  # Juros aplicados em função do número de parcelas
+    parc = total / totparc
+    print('Sua compra sera parcelada em {}x de R${:.2f} COM JUROS '.format(totparc,parc))
+else:
+    print('Opção inválida, digite a opção novamente')
+print('Sua compra da {:.2f}, no final custará {:.2f}'.format(compras, total))
